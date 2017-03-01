@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 10px auto 20px;	/*自身居中，并距离底部20px的间距*/
+	/*padding: 0px;*/		/*内边距*/
+	/*text-align: center;*/ /*子内容居中*/
+	background-color: orange;
+}
+
+.cont_principal {
+	
+}
