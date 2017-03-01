@@ -11,21 +11,60 @@
 		<div class="cont_principal">
 			<div class="cont_center">
 				<div class="cont_login">
-					
 					<div class="cont_info_log_sign_up">						
 						<!--登录模块-->
 						<div class="col_md_login">
 							<div class="cont_ba_opcitiy">
+								<h2>登录</h2>
+								<p>老用户直接登录</p>
 								<button class="btn_login" onClick="clickLoginBtnFunc()">登录</button>
 							</div>
 						</div>
 						<!--注册模块-->
 						<div class="col_md_sign_up">
 							<div class="cont_ba_opcitiy">
+								<h2>注册</h2>
+								<p>新用户注册登录</p>
 								<button class="btn_sign" onClick="clickRegisterBtnFunc()">注册</button>
 							</div>
 						</div>
-					</div>					
+					</div>	
+					
+					<!--背景图片-->
+					<div class="cont_back_info">
+						<div class="cont_img_back_grey">
+							<img src="img/bg.jpg" alt="" />
+						</div>
+					</div>
+					
+					<!--第二张-->
+					<div class="cont_forms">
+						<div class="cont_img_back"><img src="img/bg.jpg" alt="" /></div>
+						
+						<!--点击登录后，显示登录界面-->
+						<!--确认登录按钮-->
+						<div class="cont_form_login">
+							<h2>老用户登录界面</h2>
+							<input type="text" placeholder="账号" />
+							<input type="password" placeholder="密码" />
+							<button class="btn_login" onClick="clickConfirmLoginBtnFunc()">确认登录</button>
+						</div>
+						
+						<!--点击注册按钮，显示注册界面-->
+						<!--确认注册按钮-->
+						<div class="cont_form_sign_up">
+							<h2>新用户注册界面</h2>
+							<input type="text" placeholder="账号" />
+							<input type="password" placeholder="密码" />
+							<input type="password" placeholder="确认密码" />
+							<button class="btn_sign" onClick="clickConfirmRegisterBtnFunc()">确认注册</button>
+						</div>
+						
+						
+					</div>
+					
+					
+					
 			</div>
 		</div>
 		
