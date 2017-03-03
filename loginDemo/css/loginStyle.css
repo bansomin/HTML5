@@ -44,6 +44,137 @@
 	margin-left: -320px;
 } 
 
+.cont_back_info {
+	position: relative;
+	float: left;
+	width: 640px;
+	height: 280px;
+	overflow: hidden;
+	background-color: #fff;
+	margin-top: 100px;
+	box-shadow: 1px 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+/*左半侧白板*/
+.cont_forms {
+	position: absolute;
+	overflow: hidden;
+	width: 320px;
+	height: 280px;
+	top: 100px;
+	background-color: #eee;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.cont_forms_active_login {
+	height: 420px;
+	left: 0px;
+	top: 20px;
+	box-shadow: 1px 10px 30px -10px rgba(0, 0, 0, 0.5);
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.cont_forms_active_sign_up {
+	height: 420px;
+	left: 320px;
+	top: 20px;
+	box-shadow: 1px 10px 30px -10px rgba(0, 0, 0, 0.5);
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.cont_img_back_grey {
+	position: absolute;
+	width: 950px;
+	top: -80px;
+	left: -116px;
+}
+
+/*右侧半透明*/
+.cont_img_back_grey > img {
+	width: 100%;
+	opacity: 0.2;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	animation-name: animar_fondo;
+	animation-duration: 20s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@-webkit-keyframes animar_fondo {
+	from {
+		-webkit-transform: scale(1) translate(0px);
+		-ms-transform: scale(1) translate(0px);
+		-moz-transition: scale(1) translate(0px);
+		transition: scale(1) translate(0px);
+	}
+	to {
+		-webkit-transform: scale(1.5) translate(50px);
+		-ms-transform: scale(1.5) translate(50px);
+		-moz-transition: scale(1.5) translate(50px);
+		transition: scale(1.5) translate(50px);
+	}
+}
+
+.cont_img_back_ {
+  	position: absolute;
+  	width: 950px;
+	top:-80px;
+  	left: -116px;
+}
+
+.cont_img_back > img {
+	width: 100%;
+	opacity: 0.3;
+	animation-name: animar_fondo;
+	animation-duration: 20s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.cont_forms_active_login > .cont_img_back {
+	top:0px;  
+	left: -435px;
+  	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+
+
+
+
+
+.cont_forms_active_login > .cont_img_back {
+	/*top: 0px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transition: all 0.5s;*/
+}
+
+.cont_forms_active_sign_up > .cont_img_back {
+	/*top: 0px;
+	left: -435px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transition: all 0.5s;*/
+}
+
+
 /*登录|注册的背景*/
 .cont_info_log_sign_up {
 	/*background-color: white;*/	/*test*/
@@ -91,6 +222,7 @@
 	float: left;
 	width: 50%;
 }
+
 .btn_sign {
 	background-color: #f44336;
 	border: none;
@@ -109,38 +241,6 @@
 	color: yellow;				/*选中后字体颜色为蓝色*/
 	font-size: 21px;
 	border: 1px solid yellow;
-}
-
-.cont_back_info {
-	position: relative;
-	float: left;
-	width: 640px;
-	height: 280px;
-	overflow: hidden;
-	background-color: #fff;
-	margin-top: 100px;
-	box-shadow: 1px 10px 30px -10px rgba(0, 0, 0, 0.5);
-}
-
-.cont_img_back_grey {
-	position: absolute;
-	width: 950px;
-	top: -80px;
-	left: -116px;
-}
-
-/*左半侧白板*/
-.cont_forms {
-	position: absolute;
-	overflow: hidden;
-	width: 320px;
-	height: 280px;
-	top: 100px;
-	background-color: #eee;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	transition: all 0.5s;
 }
 
 /*第二张图片模块*/
@@ -178,27 +278,9 @@
 	transition: all 0.5s;
 }
 
-.cont_forms_active_login {
-	height: 420px;
-	left: 0px;
-	top: 20px;
-	box-shadow: 1px 10px 30px -10px rgba(0, 0, 0, 0.5);
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	transition: all 0.5s;
-}
 
-.cont_forms_active_sign_up {
-	height: 420px;
-	left: 320px;
-	top: 20px;
-	box-shadow: 1px 10px 30px -10px rgba(0, 0, 0, 0.5);
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	transition: all 0.5s;
-}
+
+
 
 
 /*
@@ -251,13 +333,6 @@
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-}
-
-.cont_img_back_ {
-  	position: absolute;
-  	width: 950px;
-	top:-80px;
-  	left: -116px;
 }
 
 .cont_img_back_ > img {

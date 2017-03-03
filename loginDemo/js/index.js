@@ -36,11 +36,15 @@ function clickRegisterBtnFunc(){
 	}, 400);
 }
 
-function clickConfirmLoginBtnFunc(){
-	alert("clickConfirmLoginBtnFunc");
-}
-
-function clickConfirmRegisterBtnFunc(){
-	alert("clickConfirmRegisterBtnFunc");
+function clickLoginSignUpFunc(){
+	alert("clickLoginSignUpFunc");
+	document.querySelector(".cont_forms").className = "cont_forms";
+	document.querySelector(".cont_form_sign_up").style.opacity = "0";
+	document.querySelector(".cont_form_login").style.opacity = "0";
+	
+	setTimeout(function(){
+		document.querySelector(".cont_form_sign_up").style.display = "none";
+		document.querySelector(".cont_form_login").style.display = "none";
+	}, 500);
 }
 
