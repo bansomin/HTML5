@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>	
+	<head>
+		<meta charset="utf-8" />
+		<title>鼠标提示功能的实现</title>
+		<style>
+			#div1 {
+				width: 200px;
+				height: 100px;
+				background: pink;
+				border: 1px solid gray;
+				display: none;
+			}
+			
+			#div2 {
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		
+		<script>
+			function toGreen(){
+				//变量
+				var doc = document.getElementById('div2');
+				doc.style.width = '150px';
+				doc.style.height= '150px';
+				doc.style.background = 'green';
+			}
+			
+			function toRed(){
+				//变量
+				var doc = document.getElementById('div2');
+				doc.style.width = '100px';
+				doc.style.height= '100px';
+				doc.style.background = 'red';
+			}
+		</script>
+	</head>
+	<body>
+		
+		<!--按钮-->
+		<input type="button" value="按钮" onclick="alert('您点击了按钮');"/>
+
+<br />
+<br />
+<br />
+
+		<!--输入框-->
+		<!--<input type="checkbox" onmouseover="alert('移入');" onmouseout="alert('移出')"/>-->
+		<!--<input type="checkbox" onmouseover="div1.style.display='block';" onmouseout="div1.style.display='none'"/>-->
+		<input type="checkbox" onmousemove="document.getElementById('div1').style.display='block';" 
+							   onmouseout="document.getElementById('div1').style.display='none'"/>
+		<div id="div1" align="center">
+			提示信息显示...
+		</div>
+		
+<br />
+<br />
+<br />
+		
+		<!--function-->
+		<div id="div2" onmouseover="toGreen()" onmouseout="toRed()"></div>
+		
+		
+	</body>
+</html>
