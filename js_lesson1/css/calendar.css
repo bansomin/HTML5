@@ -1,0 +1,15 @@
+.calendar {
+	width: 100px;
+	border: 1px solid black;
+}
+
+.active {
+	background: yellow;
+}
+
+.text {
+	width: 150px;
+	height: 100px;
+	border: 1px solid black;
+	background: gray;
+}

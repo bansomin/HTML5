@@ -1,0 +1,42 @@
+
+<!--获取非行间的样式-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取非行间的样式</title>
+		
+		<style>
+			#demo {
+				width: 200px;
+				height: 200px;
+				background: black;
+			}
+		</style>
+		
+		<script>
+			
+			function getStyle(obj, name){
+				if(obj.currentStyle){
+					return obj.currentStyle[name];
+				}
+				else {
+					return getComputedStyle(obj, false)[name];
+				}
+			}
+			
+			window.onload = function(){
+				var demoDIV = document.getElementById('demo');
+				alert(getStyle(demoDIV, 'backgroundColor'));
+			};
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		<div id="demo"></div>
+		
+	</body>
+</html>
