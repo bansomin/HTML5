@@ -1,0 +1,33 @@
+<!--关键字、保留字除外-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>className保留字</title>
+		
+		<style>
+			#div1 {
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+			}
+			
+			.bg {
+				background: red;
+			}
+		</style>
+		
+		<script>
+			function toRed(){
+				var obj = document.getElementById('div1');
+				obj.className = 'bg';
+			}
+		</script>
+		
+	</head>
+	<body>
+		<input type="button" value="变色" onclick="toRed()" />
+		<div id="div1"></div>
+	</body>
+</html>

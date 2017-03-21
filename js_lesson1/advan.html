@@ -1,0 +1,47 @@
+<!--样式优先级
+	通配符---标签---class---id---行间
+	注：元素.style.属性=xxx是修改行间样式
+	之后再修改className不会有效果
+	
+	忠告：操作class或是style中的一个
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>优先级问题</title>
+		
+		<style>
+			#div1 {
+				width: 200px;
+				height: 200px;
+				border: 1px solid black;
+			}
+			
+			.box {
+				background: red;
+			}
+			
+		</style>
+		
+		<script>
+			function toRed(){
+				document.getElementById('div1').className = 'box';
+			}
+			
+			function toGreen(){
+				document.getElementById('div1').style.background = 'green';
+			}
+		</script>
+		
+	</head>
+	<body>
+		
+		<input type="button" value="变红" onclick="toRed()"/>
+		<input type="button" value="变绿" onclick="toGreen()"/>
+		
+		<div id="div1"></div>
+		
+	</body>
+</html>

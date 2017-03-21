@@ -1,0 +1,35 @@
+
+<!--换肤-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>换肤</title>		
+				
+		<!--换肤-->
+		<link id="skin" rel="stylesheet" type="text/css" href="css/skin.css" />
+		
+		<script>
+			
+			//换肤1
+			function skin1(){
+				var obj = document.getElementById('skin');
+				obj.href='css/skin.css';
+			}
+
+			//换肤2
+			function skin2(){
+				var obj = document.getElementById('skin');
+				obj.href='css/skin2.css';
+			}
+		</script>
+		
+	</head>
+	<body>
+		
+		<input type="button" value="皮肤1" onclick="skin1()"/>
+		<input type="button" value="皮肤2" onclick="skin2()"/>
+		
+	</body>
+</html>

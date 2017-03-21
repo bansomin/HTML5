@@ -1,0 +1,95 @@
+
+<!--checkBox-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>getElementsByTagName</title>
+		
+		<style>
+			#div1 {
+				width: 200px;
+				height: 200px;
+				float: left;
+				border: 1px solid black;
+				margin: 10px;
+			}
+		</style>
+				
+		<script>
+			
+			var isCheck = false;	//选项框是否选中			
+			window.onload = function(){
+				
+				//取出所有DIV
+				var obj = document.getElementsByTagName('div');
+				for(var i = 0; i<obj.length; i++){
+					obj[i].style.background = 'gray';
+				}
+				
+				//按钮
+				var btnall = document.getElementById('btnall');
+				btnall.onclick = function(){
+					var objs = document.getElementById('checkDIV').getElementsByTagName('input');
+					if(isCheck){
+						isCheck = false;
+						btnall.value = "全选";
+					}
+					else{
+						isCheck = true;
+						btnall.value = "取消全选";
+					}
+					for(var i = 0; i<objs.length; i++){
+						objs[i].checked = isCheck;
+					}					
+				}
+				
+				//反选 
+				document.getElementById('btnre').onclick = function(){
+					var objs = document.getElementById('checkDIV').getElementsByTagName('input');
+					for(var i = 0; i<objs.length; i++){
+						if(objs[i].checked){
+							objs[i].checked = false;
+						}
+						else{
+							objs[i].checked = true;
+						}
+					}
+				}
+			}
+		</script>
+		
+	</head>
+	<body>
+		
+		<input id="btnall" type="button" value="全选" />
+		<input id="btnre" type="button" value="反选" /><br /><br />
+
+		<div id="checkDIV">
+			<input type="checkbox" /><br />			
+			<input type="checkbox" /><br />			
+			<input type="checkbox" /><br />			
+			<input type="checkbox" /><br />			
+			<input type="checkbox" /><br />			
+			<input type="checkbox" /><br />			
+			<input type="checkbox" /><br />			
+			<input type="checkbox" /><br />			
+			<input type="checkbox" /><br />			
+			<input type="checkbox" /><br />			
+			<input type="checkbox" /><br />			
+			<input type="checkbox" /><br />			
+			<input type="checkbox" /><br />			
+			<input type="checkbox" /><br />			
+		</div>
+
+
+		<div id="div1"></div>
+		<div id="div1"></div>
+		<div id="div1"></div>
+		<div id="div1"></div>
+		<div id="div1"></div>
+				
+		
+	</body>
+</html>

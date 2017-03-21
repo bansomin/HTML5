@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选项卡（函数传参）</title>
+		
+		<style>
+			#div1 {
+				width: 200px;
+				height: 200px;
+				background: black;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			function changeColor (color){
+				var obj = document.getElementById('div1');
+				obj.style.background = color;
+			}
+		</script>
+		
+	</head>
+	<body>
+		
+		<input type="button" value="红色" onclick="changeColor('red')" />
+		<input type="button" value="绿色" onclick="changeColor('green')" />
+		<input type="button" value="黄色" onclick="changeColor('yellow')" />
+		<div id="div1"></div>
+		
+	</body>
+</html>

@@ -1,0 +1,26 @@
+
+<!--提取行间事件-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>提取行间事件</title>
+		
+		<script>
+			window.onload = function(){	//页面加载完成时发生
+				var btn = document.getElementById('btn');
+				btn.onclick = function(){
+					alert("确认成功！");
+				}
+			}
+		</script>
+		
+	</head>
+	<body>
+		
+		<!--按钮-->
+		<input id="btn" type="button" value="确认" />
+		
+	</body>
+</html>
