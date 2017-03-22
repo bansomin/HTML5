@@ -1,0 +1,103 @@
+
+<!--无缝滚动-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>滚动</title>
+		
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			#demo {
+				width: 600px;
+				height: 150px;
+				margin: 100px auto;
+				position: relative;
+				background: red;
+				overflow: hidden;	//隐藏四个
+			}
+			
+			#demo ul {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			#demo ul li {
+				float: left;
+				width: 120px;
+				height: 150px;
+				list-style: none;
+			}
+			
+		</style>
+
+		<script>
+			window.onload = function(){
+				
+				var demo = document.getElementById('demo');
+				var uls = demo.getElementsByTagName('ul')[0];
+				var lis = uls.getElementsByTagName('li');
+				var speed = 2;
+				//调整
+				uls.innerHTML = uls.innerHTML + uls.innerHTML;
+				uls.style.width = lis[0].offsetWidth * lis.length + 'px';
+								
+				//移动
+				function moveFunc(){					
+					//实现无缝滚动（左滚动）
+					if(uls.offsetLeft<(-uls.offsetWidth/2)){
+						uls.style.left = '0';
+					}			
+					//实现无缝滚动（右滚动）
+					if(uls.offsetLeft>0){
+						uls.style.left = -uls.offsetWidth/2 + 'px';
+					}					
+					uls.style.left = uls.offsetLeft + speed + 'px';					
+				}
+				
+				var timer = setInterval(moveFunc, 30);
+				
+				demo.onmouseover = function(){
+					clearInterval(timer);
+				};
+				
+				demo.onmouseout = function(){
+					timer = setInterval(moveFunc, 30);
+				};
+				
+				//左滚动
+				document.getElementsByTagName('a')[0].onclick = function(){
+					speed = (-1) * Math.abs(speed);
+				};
+			
+				//右滚动
+				document.getElementsByTagName('a')[1].onclick = function(){
+					speed = Math.abs(speed);
+				};
+				
+			};
+		</script>
+
+	</head>
+	<body>
+		
+		<a href="javascript:;">向左走</a>
+		<a href="javascript:;">向右走</a>
+		<div id="demo">
+			<ul>
+				<li><img src="img/0.png" /></li>
+				<li><img src="img/1.png" /></li>
+				<li><img src="img/2.png" /></li>
+				<li><img src="img/3.png" /></li>
+				<li><img src="img/4.png" /></li>
+			</ul>
+		</div>
+		
+	</body>
+</html>
