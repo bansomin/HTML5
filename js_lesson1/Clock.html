@@ -27,7 +27,8 @@
 					var date = new Date();
 					var time = changeTimer(date.getHours()) + changeTimer(date.getMinutes()) + changeTimer(date.getSeconds());
 					for(var i = 0; i<imags.length; i++){
-						imags[i].src = 'img/' + time[i] + '.png';
+						//charAt();	解决兼容性
+						imags[i].src = 'img/' + time.charAt(i) + '.png';
 					}
 				};
 				
