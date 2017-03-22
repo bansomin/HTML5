@@ -1,0 +1,36 @@
+
+<!--无缝隙滚动-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>无缝隙滚动</title>
+		
+		<style>
+			#moveoff {
+				width: 100px;
+				height: 100px;
+				background: red;
+				border: 1px solid black;
+				position: absolute;
+				left: 155px;
+				top: 50px;
+			}	
+		</style>
+		
+		<script>
+			setInterval(function(){
+				var move = document.getElementById('moveoff');
+				move.style.left = move.offsetLeft + 10 + 'px';
+			}, 30);
+
+		</script>
+		
+	</head>
+	<body>
+
+		<div id="moveoff"></div>
+
+	</body>
+</html>
