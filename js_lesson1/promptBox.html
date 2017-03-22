@@ -1,0 +1,81 @@
+
+<!--延时提示框-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>延时提示框</title>
+	
+		<style>
+			
+			div {
+				float: left;
+				margin: 10px;
+			}
+			
+			#photo {
+				width: 100px;
+				height: 100px;
+				background: gray;
+				border: 1px solid black;
+			}
+			
+			#prompt {
+				width: 800px;
+				height: 14px;
+				background: black;
+				display: none;
+			}
+			
+		</style>
+	
+		<script>
+			
+			window.onload = function(){
+				
+				var timer = null;
+				var photo = document.getElementById('photo');
+				var prompt = document.getElementById('prompt');
+				
+				//进入头像，显示提示信息
+				photo.onmouseover = prompt.onmouseover = function(){
+					clearTimeout(timer);
+					prompt.style.display = 'block';
+				};
+				
+				//进入提示框，停止定时器
+//				prompt.onmouseover = function(){
+//					clearTimeout(timer);
+//				};
+				
+				//移出，开始定时器
+				photo.onmouseout = prompt.onmouseout = function(){
+					timer = setTimeout(function(){
+						prompt.style.display = 'none';
+					}, 500);
+				};
+				
+				//移出提示框，隐藏提示框
+//				prompt.onmouseout = function(){
+//					timer = setTimeout(function(){
+//						prompt.style.display = 'none';
+//					}, 500);
+//				};
+			}
+			
+		</script>
+		
+	</head>
+	
+	<body>
+	
+		<div id="photo">
+			<img src="img/photo.jpg" />
+		</div>
+		<div id="prompt">
+			<img src="img/prompt.png" />
+		</div>
+		
+	</body>
+</html>
