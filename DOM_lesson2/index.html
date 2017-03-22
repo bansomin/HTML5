@@ -1,10 +1,47 @@
+
+<!--DOM-->
+<!--
+	1---元素
+	3---文本节点
+	
+-->
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+		<title>DOM</title>
+		
+		<script>
+			window.onload = function(){
+				var demo = document.getElementById('demo');
+				//IE6-8正常
+				//alert(demo.childNodes.length);
+				//解决方法
+				//方法一
+//				for(var i = 0; i<demo.childNodes.length; i++){
+//					if(demo.childNodes[i].nodeType == 1){
+//						demo.childNodes[i].style.background = 'red';
+//					}
+//				};
+
+				//方法二
+				//alert(demo.children.length);
+				for(var i = 0; i<demo.children.length; i++){
+					demo.children[i].style.background = 'red';
+				}
+				
+			};
+		</script>
+		
 	</head>
 	<body>
+		
+		<ul id="demo">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
 		
 	</body>
 </html>
