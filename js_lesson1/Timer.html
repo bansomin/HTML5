@@ -1,0 +1,56 @@
+
+<!--定时器-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定时器</title>
+		
+		<script>
+//			function show(){
+//				alert('a');
+//			}		
+//			//循环执行
+//			setInterval(show, 5000);		
+//			//仅仅执行一次
+//			setTimeout(show, 1000);
+
+			window.onload = function(){
+				var startBtn = document.getElementById('start');
+				var endBtn = document.getElementById('end');
+				
+				var timerS = null;
+				var timerT = null;
+				
+				startBtn.onclick = function(){
+//					timerS = setInterval(function(){
+//						alert('b');
+//					}, 5000);
+					
+					timerT = setTimeout(function(){
+						alert('c');
+					}, 5000);
+				};
+				
+				endBtn.onclick = function(){
+					
+					//clearInterval(timerS);					
+					clearTimeout(timerT);
+				};
+				
+				
+				
+			};
+			
+		
+		</script>
+				
+	</head>
+	<body>
+		
+		<input id="start" type="button" value="开启" />
+		<input id="end" type="button" value="停止" />
+		
+	</body>
+</html>
