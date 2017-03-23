@@ -1,0 +1,35 @@
+
+<!--parentRemoveChild-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>parentRemoveChild</title>
+		
+		<script>
+			window.onload = function(){
+				var as = document.getElementsByTagName('a');
+				var ul = document.getElementById('demoUL');
+					for(var i = 0; i<as.length; i++){
+						as[i].onclick = function(){
+						ul.removeChild(this.parentNode);
+					};
+				}
+			};
+		</script>
+		
+	</head>
+	<body>
+		
+		<ul id="demoUL">
+			<li>1 --- <a href="javascript:;">删除</a></li>
+			<li>2 --- <a href="javascript:;">删除</a></li>
+			<li>3 --- <a href="javascript:;">删除</a></li>
+			<li>4 --- <a href="javascript:;">删除</a></li>
+			<li>5 --- <a href="javascript:;">删除</a></li>
+			<li>6 --- <a href="javascript:;">删除</a></li>
+		</ul>
+		
+	</body>
+</html>

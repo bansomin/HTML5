@@ -1,0 +1,53 @@
+
+<!--create-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>创建</title>
+		
+		<script>
+			window.onload = function(){
+				var txt = document.getElementById('txt');
+				var btn = document.getElementById('btn');
+				var btC = document.getElementById('btnC');
+				var ul  = document.getElementById('demoUL');
+				
+				btn.onclick = function(){
+					//创建
+					var li = document.createElement('li');
+					var nowlis = ul.getElementsByTagName('li');	//取出当前所有的li
+					li.innerHTML = txt.value;
+					//插入
+					//父级.appendChild(li);
+					//ul.appendChild(li);		//增加到末尾
+					
+					if(nowlis.length>0){	//判断当前是否有li
+						ul.insertBefore(li, nowlis[0]);	//增加到nowlis[0]之前
+					}
+					else{
+						ul.appendChild(li);
+					}
+				};
+				
+				btC.onclick = function(){
+					txt.value = '';
+				};
+			};
+		</script>
+		
+	</head>
+	<body>
+		
+		<input id="txt" type="text" />
+		<input id="btn" type="button" value="创建LI" />
+		<input id="btnC" type="button" value="清空输入板" />
+		
+		
+		<ul id="demoUL">
+			
+		</ul>
+		
+	</body>
+</html>
