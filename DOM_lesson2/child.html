@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Child</title>
+		
+		<script>
+			window.onload = function(){
+				var ul = document.getElementById('demo');
+				//IE6-8
+				//ul.firstChild.style.background = 'red';
+				
+				//高级浏览器
+				//ul.firstElementChild.style.background = 'red';
+				
+				//解决兼容性问题
+				if(ul.firstElementChild){
+					ul.firstElementChild.style.background = 'red';
+				}
+				else{
+					ul.firstChild.style.background = 'red';
+				}
+			};
+		</script>
+		
+	</head>
+	<body>
+		
+		<ul id="demo">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		
+	</body>
+</html>
