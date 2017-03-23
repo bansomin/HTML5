@@ -1,0 +1,60 @@
+
+<!--className-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>className</title>
+		
+		<script>
+			
+			//封装
+			function getByClassName (parent, classname){
+				
+				var results = [];
+				var eles = parent.getElementsByTagName('*');
+				for(var i = 0; i<eles.length; i++){
+					if(eles[i].className == classname){
+						results.push(eles[i]);
+					}
+				}
+				return results;
+			};
+			
+			window.onload = function(){
+				var ul = document.getElementById('demoUL')
+				var lis = ul.getElementsByTagName('li');				
+				//方法一
+//				for(var i = 0; i<lis.length; i++){
+//					if(lis[i].className == 'demo'){
+//						lis[i].style.background = 'red';
+//					}
+//				}
+
+				//方法二
+				var boxes = getByClassName(ul, 'demo');
+				for(var i = 0; i<boxes.length; i++){
+					boxes[i].style.background = 'green';
+				}
+				
+			};
+		</script>
+		
+	</head>
+	<body>
+		
+		<ul id="demoUL">
+			<li class="demo">1</li>
+			<li>0</li>
+			<li>0</li>
+			<li class="demo">1</li>
+			<li class="demo">1</li>
+			<li>0</li>
+			<li>0</li>
+			<li class="demo">1</li>
+			<li>0</li>
+		</ul>
+		
+	</body>
+</html>
