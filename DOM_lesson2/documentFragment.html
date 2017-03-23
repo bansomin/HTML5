@@ -1,0 +1,36 @@
+
+<!--文档碎片-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文档碎片</title>
+		
+		<script>
+			window.onload = function(){
+				var ul = document.getElementById('demoUL');
+				var frag = document.createDocumentFragment();
+
+				for(var i = 0; i<10000; i++){
+					var li = document.createElement('li');
+					//方式一
+					//ul.appendChild(li);
+					
+					//方式二
+					frag.appendChild(li);
+				}
+				
+				ul.appendChild(frag);
+			};
+		</script>
+		
+	</head>
+	<body>
+		
+		<ul id="demoUL">
+			
+		</ul>
+		
+	</body>
+</html>
