@@ -1,0 +1,83 @@
+
+<!--Table-->
+<!--
+	tBodies/tHead/tFoot/rows/cells
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表格</title>
+		
+		<script>
+			window.onload = function(){
+				var table = document.getElementById('demoTab');
+				var oldColor = '';
+				
+				for(var i = 0; i<table.tBodies[0].rows.length; i++){
+					
+					//鼠标指定变色
+					table.tBodies[0].rows[i].onmouseover = function(){
+						oldColor = this.style.background;
+						this.style.background = 'yellow';
+					};
+					table.tBodies[0].rows[i].onmouseout = function(){
+						this.style.background = oldColor;
+					};
+		
+					//隔行变色
+					if(i%2){
+						table.tBodies[0].rows[i].style.background = '#CCC';
+					}
+					else{
+						table.tBodies[0].rows[i].style.background = '';
+					}
+				}
+				
+				//取出Blue
+				//alert(table.getElementsByTagName('tbody')[0].getElementsByTagName('tr')[1].getElementsByTagName('td')[1].innerHTML);
+				//alert(table.tBodies[0].rows[1].cells[1].innerHTML);
+			};
+		</script>
+		
+	</head>
+	<body>
+		
+		<table id="demoTab" border="1" width="300">
+			<thead>
+				<td>学号</td>
+				<td>姓名</td>
+				<td>年龄</td>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Red</td>
+					<td>23</td>
+				</tr>
+		
+				<tr>
+					<td>2</td>
+					<td>Blue</td>
+					<td>45</td>
+				</tr>
+				
+				<tr>
+					<td>3</td>
+					<td>Green</td>
+					<td>45</td>
+				</tr>
+				
+				<tr>
+					<td>4</td>
+					<td>Yellow</td>
+					<td>32</td>
+				</tr>
+		
+			</tbody>
+		</table>
+		
+	</body>
+</html>
