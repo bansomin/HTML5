@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>登录|注册</title>
+		<link rel="stylesheet" href="css/test.css"/> <!--当前页面与href所指定文档的关系.即说明的是,href连接的文档是一个新式表-->
+	
+	<style>
+		
+		/*旋转*/
+		/*div {
+			width: 100px;
+			height: 75px;
+			background-color: red;
+			border: 1px solid black;
+		}
+		div#div2 {
+			transform: rotate(30deg);
+			-ms-transform: rotate(30deg);		
+			-webkit-transform: rotate(30deg);	
+		}*/
+		
+		/*填充或是拉伸*/
+		div {
+			border:15px solid transparent;
+			width:250px;
+			padding:10px 20px;
+		}
+		#round {
+			-webkit-border-image:url(img/testImg.png) 30 30 round; 	/* Safari 5 and older */
+			-moz-border-image:url(img/testImg.png) 30 30 round; 	/* Opera */
+			border-image:url(img/testImg.png) 30 30 round;		
+		}
+		#stretch {
+			-webkit-border-image:url(img/testImg.png) 30 30 stretch; /* Safari 5 and older */
+			-moz-border-image:url(img/testImg.png) 30 30 stretch; /* Opera */
+			border-image:url(img/testImg.png) 30 30 stretch;
+		}
+		
+		/*背景图片*/
+		/*#backgroundTest {
+			background-image: url(img/shoes-prop.png), url(img/mode2.png);
+			background-position: right bottom, left top;
+			background-repeat: no-repeat no-repeat;
+			padding: 15px;
+		}*/
+		#backgroundTest {
+			background: url(img/shoes-prop.png) right bottom no-repeat, url(img/mode2.png) left top no-repeat;
+			padding: 15px;
+		}
+		
+		#backgroundTest1 {
+			background: url(img/mode2.png) no-repeat;
+			background-size: 100% 100%;
+			padding-top: 40;
+		}
+		
+		/*相对位置*/
+		pos {
+			border: 1px solid black;
+			padding: 35px;
+			background: url(img/shoes-prop.png) left no-repeat;
+		}
+		pos#pos1 {
+			background-origin: border-box;	
+		}
+		pos#pos2 {
+			
+		}
+		
+	</style>
+	</head>
+	
+	<body>
+
+<!--1-->
+	<!--盒子阴影-->
+	<!--<div class="test"></div>-->
+	
+<!--2-->
+	<!--这是一个div-->
+	<!--<div>
+		This is DIV.
+	</div>
+	
+	<div id="div2">
+		This is DIV.
+	</div>
+	-->
+	
+<!--3-->
+	<!--圆角-->
+	<!--<div class="borderTest" align="center">
+		这是个圆角图形
+	</div>
+	-->
+	
+<!--4-->
+	<!--边界图片-->
+	<!--填充-->
+	<div id="round" align="center">
+		图像重复来填充该区域.
+	</div>
+	
+	<br />
+	
+	<!--拉伸-->
+	<div id="stretch" align="center">
+		图像拉伸来填充该区域.
+	</div>
+	
+	<br />
+	
+	<!--圆角-->
+	<div class="rcorners1" align="center">
+		1.圆角-颜色(15px 50px)
+	</div>
+	
+	<br />
+	
+	<div class="rcorners2" align="center">
+		2.圆角-边框(25px)
+	</div>
+	
+	<br />
+	
+	<div class="rcorners3" align="center">
+		3.圆角-图片(25px)
+	</div>
+	
+	<br />
+	
+	<div class="rcorners4" align="center">
+		4.圆角-颜色(50px/15px)
+	</div>
+	
+	<br />
+	
+	<div class="rcorners5" align="center">
+		5.圆角-颜色(15px/50px)
+	</div>
+	
+	
+	<br />
+	
+	<div class="rcorners6" align="center">
+		6.圆角-颜色(50%)
+	</div>
+	
+	<br />
+	
+	<!--背景图片-->
+	<div id="backgroundTest" align="center">
+		两个背景图片两个背景图片两个背景图片两个背景图片
+		两个背景图片两个背景图片两个背景图片两个背景图片
+		两个背景图片两个背景图片两个背景图片两个背景图片
+		两个背景图片两个背景图片两个背景图片两个背景图片
+		两个背景图片两个背景图片两个背景图片两个背景图片
+	</div>
+	
+	<br />
+	
+	<!--填充-->
+	<div id="backgroundTest1" align="center">
+		图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充
+		图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充
+		图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充图片填充
+	</div>
+	
+	<br />
+	
+	<br
+	
+	<!--相对位置-->
+	<div id="pos1" align="center">
+		背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置背景图像边界框的相对位置
+	</div>
+	
+	</body>
+	
+</html>

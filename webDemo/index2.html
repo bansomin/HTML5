@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>相对位置</title>
+		<link rel="stylesheet" href="css/test.css" />
+		
+		<style>
+			
+			div {
+				border: 5px solid black;
+				padding: 35px;
+				background:url(img/shoes-prop.png) left no-repeat;
+			}
+			
+			#div1 {
+				background-origin: border-box;
+			}
+		
+			#div2 {
+				background-origin: content-box;
+			}
+			
+			#repeatRadialGrad {
+				height: 150px;
+				width: 200px;
+				background: -webkit-repeating-radial-gradient(red, yellow 10%, green 15%);
+				background: -moz-repeating-radial-gradient(red, yellow 10%, green 15%);
+				background: repeating-radial-gradient(red, yellow 10%, green 15%);
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="div1">
+			背景图像边界框的相对位置
+		</div>
+		
+		<br />
+		
+		<div id="div2">
+			背景图像的相对位置的内容框
+		</div>
+		
+		<br />
+		
+		<div class="background_clip1">
+			<h2>
+				background-clip属性
+			</h2>
+			<p>
+				background-clip属性background-clip属性background-clip属性background-clip属性background-clip属性background-clip属性
+			</p>
+		</div>
+		
+		<br />
+		
+		<div class="background_clip2">
+			<h2>
+				background-clip属性
+			</h2>
+			<p>
+				background-clip属性background-clip属性background-clip属性background-clip属性background-clip属性background-clip属性
+			</p>
+		</div>
+		
+		<br />
+		
+		<div class="background_clip3">
+			<h2>
+				background-clip属性
+			</h2>
+			<p>
+				background-clip属性background-clip属性background-clip属性background-clip属性background-clip属性background-clip属性
+			</p>
+		</div>
+		
+		<br />
+		
+		<div class="updowngrad" align="center">
+			<p>
+				颜色渐变(上到下)
+			</p>
+		</div>
+		
+		<br />
+		
+		<div class="leftrightgrad" align="center">
+			<p>
+				颜色渐变(左到右)
+			</p>
+		</div>
+		
+		<br />
+		
+		<div class="grad2" align="center">
+			<p>
+				颜色渐变(对角)
+			</p>
+		</div>
+		
+		<br />
+		
+		<!--使用角度-->
+		<div class="angleGrad0" align="center">
+			angle = 0
+		</div>
+		
+		<br />
+		
+		<div class="angleGrad90" align="center">
+			angle = 90
+		</div>
+		
+		<br />
+		
+		<div class="angleGrad180" align="center">
+			angle = 180
+		</div>
+		
+		<br />
+		
+		<div class="angleGrad0" align="center">
+			angle = -180
+		</div>
+		
+		<br />
+		
+		<div class="mulcolnode1" align="center">
+			3 个颜色结点（均匀分布）
+		</div>
+		
+		<br />
+		
+		<div class="mulcolnode2" align="center">
+			7 个颜色结点（均匀分布）
+		</div>
+			
+			
+		<br />
+		
+		<div class="mulcolnode3" align="center">
+			渐变背景
+		</div>
+		
+		<br />
+		
+		<div class="transparencyGrad" align="center">
+			线性渐变 - 透明度
+			<p>
+				rgba() 函数中的最后一个参数可以是从 0 到 1 的值，它定义了颜色的透明度：0 表示完全透明，1 表示完全不透明
+			</p>
+		</div>
+		
+		<br />
+		
+		<div class="repeatGrad">
+			
+		</div>
+		
+		<br />
+		
+		<div class="radialGrad" align="center">
+			 颜色结点均匀分布
+		</div>
+		
+		<br />
+		
+		<div class="radialGrad2" align="center">
+			 颜色结点不均匀分布
+		</div>
+		
+		<br />
+		
+		<div class="radialGrad_Circle" align="center">
+			 颜色结点不均匀分布(圆形)
+		</div>
+		
+		<br />
+		<div id="repeatRadialGrad" align="center">
+			重复的径向渐变
+		</div>
+		
+		
+		
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />	
+		
+	</body>
+</html>

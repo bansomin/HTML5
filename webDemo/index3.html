@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>文本相关操作</title>
+		
+		<link rel="stylesheet" href="css/textDemo.css" />
+		
+		<style>
+			
+			div {
+				/*border: 5px solid black;*/				
+			}
+			
+			div#textshadow {
+				font-size: 40px;
+				text-shadow: 5px 5px 5px #4B0082;
+			}
+			
+			div#boxShadow {
+				width: 300px;
+				height: 200px;
+				background-color: red;
+				box-shadow: 10px 10px 5px #008000;
+			}
+			
+			#boxShadowOne {
+				position: relative;
+				-webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+				box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+				padding: 10px;
+				background: greenyellow;
+			}
+			
+			/*make the image fit the box*/
+			#boxShadowOne img {
+				width: 100%;
+				border: 5px solid #CCFF00;
+				border-style: inset;
+			}
+			
+			#boxShadowOne::after {
+				width: 70%;
+				height: 100px;
+				left: 15%;
+				bottom: 0;
+				content: "";
+				position: absolute;
+				z-index: 1;
+				-webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+				box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+			}
+						
+		</style>
+		
+	</head>
+	<body>
+		
+		<h1 align="center">文本</h1>
+		<hr />
+		
+		<br />
+		
+		<div id="textshadow">
+			TextShadow Effect!
+		</div>
+		
+		<br />
+		
+		<div id="boxShadow" align="center">
+			BoxShadow Effect!
+		</div>
+		
+		<br />
+		
+		<div id="boxShadowOne">
+			<img src="img/po.jpg" alt="Norway" width="600" height="400"/>
+		</div>
+		
+		<br />
+		
+		<div class="card">
+			<div class="header">
+				<h1>
+					1
+				</h1>
+			</div>
+			
+			<div class="container">
+				<p>
+					January 1/2016
+				</p>
+			</div>
+		</div>
+		
+		<br />
+		
+		<!--图片-->
+		<div class="polaroid">
+			<img src="img/po.jpg" alt="Norway" style="width: 100%" />
+			<div class="container">
+				<p>
+					Hellow, World!
+				</p>
+			</div>
+		</div>
+		
+		<br />
+		
+		<!--溢出内容-->
+		<div class="overflow1" style="text-overflow: ellipsis;">
+			<h6>
+				ellipsis
+			</h6>
+			This is some long text that will not fit in the box
+		</div>
+		
+		<br />
+		
+		<div class="overflow1" style="text-overflow: clip;">
+			<h6>
+				clip
+			</h6>
+			This is some long text that will not fit in the box
+		</div>
+		
+		<br />
+		
+		<!--只在 Firefox 浏览器下有效-->
+		<div class="overflow1" style="text-overflow: '>>';">
+			<h6>
+				>>
+			</h6>
+			This is some long text that will not fit in the box
+		</div>
+		
+		<br />
+		
+		<div class="breakWord">
+			This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line. 能有会露个脸仍地如何用臾会 全珍仍如何用仍未仍未你爱不爱我体八月十五 
+		</div>
+		
+	</body>
+</html>

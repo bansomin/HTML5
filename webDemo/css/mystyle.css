@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+.cotn_principal {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: #FFF;	/*白色*/	/*background: linear-gradient(135deg, #aac4bc 0%,#eca8a8 100%,#eed5a9 100%);*/	
+	/*Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cfd8dc+0,607d8b+100,b0bec5+100 */	
+	/*background: #aac4bc;  Old browsers */	
+	/*background: -moz-linear-gradient(-45deg,  #aac4bc 0%, #eca8a8 100%, #eed5a9 100%);  FF3.6-15 */	
+	/*background: -webkit-linear-gradient(-45deg,  #aac4bc 0%,#eca8a8 100%,#eed5a9 100%);  Chrome10-25,Safari5.1-6 */	
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfd8dc', endColorstr='#b0bec5',GradientType=1 );  IE6-9 fallback on horizontal gradient */
+}
+
+.cont_central {
+	float: left;
+	width: 100%;
+	position: relative;
+	background-color: #999;	/*灰色*/
+}
+
+.cont_login {
+	position: relative;
+	width: 640px;
+	margin-left: -320px;
+	left: 50%;
+	background-color: #03F;	/*蓝色*/
+}
+
+/*login/signup的背景*/
+.cont_info_log_sign_up {
+	position: absolute;
+	width: 640px;
+	height: 280px;
+	top: 100px;
+	z-index: 1;
+	background-color: #0F0;	/*绿色*/
+}
+
+/*login的大背景*/
+.col_md_login {
+	position: relative;
+	float: left;
+	width: 50%;
+	background-color: #F00;	/*红色*/
+}
+
+/*login的小背景*/
+.cont_ba_opcitiy {
+	font-weight: 400;
+	margin-top: 15px;
+	color: #fff;
+	background-color: #60F;	/*红色*/
+}
