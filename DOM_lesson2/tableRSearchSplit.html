@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>split,多方搜索</title>
+		
+		<script>
+			
+			window.onload = function(){
+				var txt = document.getElementById('txt');
+				var btn = document.getElementById('btn');
+				var tab = document.getElementById('demoTab');
+				
+				btn.onclick = function(){
+					for(var i = 0; i<tab.tBodies[0].rows.length; i++){
+						var textName = txt.value.toLowerCase();
+						var textArray = textName.split(' ');
+						var tableName = tab.tBodies[0].rows[i].cells[1].innerHTML.toLowerCase();
+						
+						tab.tBodies[0].rows[i].style.background = ''; //display = 'none'
+						for(var j = 0; j<textArray.length; j++){
+							if(tableName.search(textArray[j])!=-1){
+								tab.tBodies[0].rows[i].style.background = 'yellow';	//display = 'block'
+							}
+						}
+						
+					}
+				};
+			};
+			
+		</script>
+		
+	</head>
+	
+	<body>
+		
+		姓名:<input id="txt" type="text" />
+		<input id="btn" type="button" value="搜索" />
+		
+		<table id="demoTab" border="1" width="300">
+			<thead>
+				<td>学号</td>
+				<td>姓名</td>
+				<td>年龄</td>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Red</td>
+					<td>23</td>
+				</tr>
+		
+				<tr>
+					<td>2</td>
+					<td>Blue</td>
+					<td>45</td>
+				</tr>
+				
+				<tr>
+					<td>3</td>
+					<td>Green</td>
+					<td>45</td>
+				</tr>
+				
+				<tr>
+					<td>4</td>
+					<td>Yellow</td>
+					<td>32</td>
+				</tr>
+		
+			</tbody>
+		</table>
+		
+	</body>
+			
+</html>
