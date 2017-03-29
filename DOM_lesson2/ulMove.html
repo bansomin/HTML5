@@ -1,0 +1,55 @@
+
+<!--点击移动-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			
+			#demoul1 {
+				background: gray;
+			}
+			
+			#demoul2 {
+				background: yellow;
+			}
+			
+		</style>
+		
+		<script>
+			window.onload = function(){
+				var ul1 = document.getElementById('demoul1');
+				var btn = document.getElementById('btn');
+				var ul2 = document.getElementById('demoul2');
+			
+				btn.onclick = function(){
+					var tempLi = ul1.children[0];
+					
+					//ul1.removeChild(tempLi);
+					ul2.appendChild(tempLi);	//1、先把该元素从父级上删除2、添加到新的父级上
+				};
+			};
+		</script>
+		
+	</head>
+	<body>
+		
+		<ul id="demoul1">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		
+		<input id="btn" type="button" value="移动" />
+		
+		<ul id="demoul2">
+			
+		</ul>
+		
+	</body>
+</html>
