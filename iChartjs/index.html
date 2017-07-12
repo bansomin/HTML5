@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>iChartjs</title>
+		
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script src="js/ichart.1.2.min.js"></script>
+	</head>
+	
+	<body>
+		<div id="canvasDiv"></div>
+	</body>
+	
+	<script type="text/javascript">
+		
+		$(function(){
+				var data = [
+				        	{name : 'Twitter',value : 15,color:'#feabc9'},
+				        	{name : 'Instant Messenger',value : 28,color:'#ffdb6d'},
+				        	{name : 'Dribbble',value : 32,color:'#96e2f2'},
+				        	{name : 'Forrst',value : 10,color:'#f86a66'},
+				        	{name : 'Other',value : 15,color:'#86c399'}
+			        	];
+	        	
+				var chart = new iChart.Donut2D({
+					render : 'canvasDiv',
+					data: data,
+					footnote : {
+						text : 'ichartjs.com',
+						color : '#486c8f',
+						fontsize : 12,
+						padding : '0 38'
+					},
+					sub_option : {
+						label : false,
+						border : false
+					},
+					legend:{
+						enable:true,
+						padding:60,
+						offsetx:-86,
+						color:'#3e576f',
+						fontsize:20,//文本大小
+						sign_size:20,//小图标大小
+						line_height:24,//设置行高
+						sign_space:10,//小图标与文本间距
+						border:false,
+						valign:'bottom',
+						background_color : null//透明背景
+					},
+					align : 'left',
+					offsetx:50,
+					separate_angle:10,//分离角度
+					shadow : true,
+					shadow_blur : 2,
+					shadow_color : '#aaaaaa',
+					shadow_offsetx : 0,
+					shadow_offsety : 0,
+					background_color:'#f3f3f3',
+					width : 800,
+					height : 400,
+					radius:150
+				});
+
+				//利用自定义组件构造右侧说明文本
+				chart.plugin(new iChart.Custom({
+						drawFn:function(){
+							//在右侧的位置，渲染说明的文字
+							chart.target.textAlign('start')
+							.textBaseline('top')
+							.textFont('600 18px Verdana')
+							.fillText('Procrastination Activity',430,100,false,'#3e576f')
+							.textFont('600 14px Verdana')
+							.fillText('A breakdown of daily distractions and\nthe amount of time spent on each...roughly.',430,130,false,'#3e576f',false,24);
+							
+						}
+				}));
+				
+				chart.draw();
+			});
+		
+		
+//		  function Bar2D(){
+// var data = [
+//           {name : 'Kamile Jureviciute' ,value :80 ,color:'#006CFF'},{name : 'Donald Sue' ,value :33 ,color:'#FF6600'},{name : 'Connie Vuong' ,value :173 ,color:'#34A038'},{name : 'Karen Zanger' ,value :75 ,color:'#945D59'},                                  ];
+// 
+// new iChart.Bar2D({
+//   render : 'canvasDiv', //指定绘制到的id
+//   data: data, //图表的数据
+//   title : "Number of Patient Visit",  //图表的标题                            
+//   animation:true, //是否显示动画，默认为false
+//   decimalsnum:2,  //百分点精确到2位
+//   width : 900, //宽度
+//   height : 400, //高度
+//   align : 'center', //对齐方式，默认为center
+//   padding : 15, //填充
+//   border: 'none', //边框，默认为true
+//　　　　//鼠标交互的tip提示
+//   tip:{
+//         enable:true,
+//         listeners:{
+//             //tip:提示框对象、name:数据名称、value:数据值、text:当前文本、i:数据点的索引
+//             parseText:function(tip,name,value,text,i){
+//                 return "详细信息: <br />"+value+"k";
+//             }
+//         }
+//   },
+//   
+//   
+// }).draw();
+// }
+// 
+// Bar2D();
+		
+	</script>
+	
+</html>
